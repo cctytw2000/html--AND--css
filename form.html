@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+     fieldset{
+         width:500px;
+         border:1px solid 	#00e3e3 ;
+         border-radius: 40px;
+         margin:10px;
+         }
+     .div1{
+         border-bottom:2px solid  #00db00;
+         padding:10px;
+         margin:10px;
+         width:400px;
+     }
+     .sub{
+         text-align:center;
+         width:500px;
+     }
+     .t1{
+        width:100px;
+        float: left;
+        text-align:right;
+        padding-right:5px;
+        
+     }
+     textarea{
+         resize:none;
+     }
+     em{
+         color:red;
+     }
+</style>
+<body>
+    <form action="#" method="get" enctype>
+        <fieldset>
+            <legend>個人資料一<em>(必填)</em></legend>
+        <div class="div1">
+        <label class="t1" for="na1">姓名:</label><input type="text" id="na1"name="account" value"請輸入">
+        </div>
+        <div class="div1">
+        <label class="t1" for="pwd1">密碼:</label><input type="password" id="pwd1" name="pwd" maxlengh="8">
+        </div>
+        <div class="div1">
+            <label for="" class="t1">性別:</label>
+            <input type="radio" name="genter" value="male" id="ml"><label for="ml">男</label>
+            <input type="radio" name="genter" value="female" id="fl"><label for="fl">女</label>
+        </div>
+        </fieldset>
+        <fieldset>
+            <legend>聯絡方式<em>(必填)</em></legend>
+        <div class="div1">
+            <label for="" class="t1" value="add1">住址:</label>
+            <select name="living">
+                <option value="none" selected>請選擇</option>
+                <option value="tpe">台北市</option>
+                <option value="tph">新北市</option>
+                <option value="tyc">桃園市</option>
+                <option value="hsc">新竹市</option>
+             </select>
+        </div> 
+        <div class="div1">
+        <label for="" class="t1">完整地址</label>
+        <input type="text" name="add2" value="請輸入" size="30px">
+        </div>
+        </fieldset>
+        <fieldset>
+        <legend>個人資料二</legend>
+        <div class="div1">
+            <label class="t1">興趣:</label>
+            <input type="checkbox" name="hobby" value="music" id="music"><label for="music">音樂</label>
+            <input type="checkbox" name="hobby" value="sport" id="sport"><label for="sport">運動</label>
+            <input type="checkbox" name="hobby" value="reading" id="reading"><label for="reading">閱讀</label>
+            <input type="checkbox" name"hobby" value="movie" id="movie"><label for="movie">電影</label>
+        </div>
+        <div class="div1">
+            <label for="" class="t1">照片:</label><input type="file" name="file1">
+        </div>
+        <div class="div1">
+        <label class="t1" for="memo1">自我介紹:</label><textarea clos="40" rows="6"id="memo1" nema="memo"></textarea>
+        </div>
+        </fieldset>
+        <div class="sub">
+        <input type="submit" value="送出">
+        <input type="reset" value="清除">
+        </div>
+    </form>
+    
+</body>
+</html>

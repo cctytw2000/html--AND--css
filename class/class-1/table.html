@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<style>
+ #table1{
+     width: 500px;
+     border : 3px solid gray;
+     border-collapse: collapse;
+ }
+ td,th{
+     border:1px solid black;
+      }
+thead{
+    background-color:orange;
+    color:blue;
+    text-transform:uppercase;
+    border-bottom:5px double yellow
+      }
+tbody{
+    background-color:tomato;
+    text-align:center;
+      }
+tbody tr:nth-child(2n){
+    background-color:tan;
+       }
+tbody tr:nth-child(2n+1){
+    background-color:springgreen;
+    }
+tbody td:hover{
+    background-color:royalblue
+
+}
+</style>
+<body>
+    <table id="table1">
+        <caption><h3>表格練習</h3></caption>
+       <thead>
+        <tr> 
+            
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+        </tr>
+        <tr>
+            <th colspan="2">a</th>
+                
+            <th colspan="2">c</th>
+       
+        </tr>
+     </thead> 
+     <tbody>
+        <tr>
+            <td colspan="4">1</td>
+      
+        </tr>
+        <tr>
+            <td rowspan="3">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+                  
+            <td>2</td>
+            <td rowspan="2" colspan="2">3</td>
+            
+        </tr>
+        <tr>
+             <td>2</td>
+        </tr>
+        <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+             <td>4</td>
+        </tr>
+        <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+             <td>4</td>
+        </tr>
+    </tbody> 
+    
+    </table>
+    <hr>
+    <div style="height:200px;width:200px;border:3px double orange;line-height:200px;text-align:center">div文字對齊</div>
+    <div style="width:200px;border:3px double blue;text-align:center;padding:200px">哈囉你好</div>
+</body>
+</html>

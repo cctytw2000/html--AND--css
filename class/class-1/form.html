@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+            fieldset{
+                width:500px;
+                border:1px solid 	#00e3e3 ;
+                border-radius: 40px;
+                margin:10px;
+                }
+            .div1{
+                border-bottom:2px solid  #00db00;
+                padding:10px;
+                margin:10px;
+                width:400px;
+            }
+            .sub{
+                text-align:center;
+                width:500px;
+            }
+            .t1{
+               width:100px;
+               float: left;
+               text-align:right;
+               padding-right:5px;
+               
+            }
+            textarea{
+                resize:none;
+            }
+            em{
+                color:red;
+            }
+       </style>
+       <script>
+                       // JS寫在這裡
+             function numberChange() {
+                var n = document.getElementById('numberInput').value;
+                document.getElementById('numberText').value = n;
+             }
+              function rangeChange() {
+                var n = document.getElementById('rangeInput').value;
+                document.getElementById('rangeText').value = n;
+                       }
+                   </script>
+</head>
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>個人資料一<em>(必填)</em></legend>
+        <div class="div1">
+        <label class="t1" for="na1">姓名:</label><input type="text" id="na1"name="account"  size="30px" autocomplete="off" placeholder="請輸入姓名" required>
+        </div>
+        <div class="div1">
+        <label class="t1" for="pwd1">密碼:</label><input type="password" id="pwd1" name="pwd" maxlengh="8" placeholder="請輸入密碼" size="30px" required>
+        </div>
+        <div class="div1">
+            <label for="" class="t1">性別:</label>
+            <input type="radio" name="genter" value="male" id="ml"><label for="ml" required>男</label>
+            <input type="radio" name="genter" value="female" id="fl"><label for="fl">女</label>
+        </div>
+        <div class="div1">
+            <label for="" class="t1">電話:</label><input type="tel" name="phonenumber" placeholder="09xx-xxx-xxx" required>
+        </div>
+        <div class="div1">
+            <label for="" class="t1">生日:</label><input type="date" name="birthday" required>
+        </div>
+        <div class="div1">
+            <label for="" class="t1">身分證字號</label><input type="text" name="idcode" maxlength="10" pattern="[a-zA-Z]{1}[1-2]{1}\d{8}" required>
+        </div>
+        </fieldset>
+        <fieldset>
+            <legend>聯絡方式<em>(必填)</em></legend>
+        <div class="div1">
+            <label for="" class="t1" value="add1">住址:</label>
+            <select name="living">
+                <option value="none" selected>請選擇</option>
+                <option value="tpe">台北市</option>
+                <option value="tph">新北市</option>
+                <option value="tyc">桃園市</option>
+                <option value="hsc">新竹市</option>
+             </select>
+        </div> 
+        <div class="div1">
+        <label for="" class="t1">完整地址</label>
+        <input type="text" name="add2" placeholder="請輸入" size="30px">
+        </div>
+        <div class="div1">
+            <label for="" class="t1">電子郵件:</label><input type="email" name="mail" list="ml1" placeholder="1234@123.com.tw">
+        </div>
+        </fieldset>
+        <fieldset>
+        <legend>個人資料二</legend>
+        <div class="div1">
+            <label class="t1">興趣:</label>
+            <input type="checkbox" name="hobby" value="music" id="music"><label for="music">音樂</label>
+            <input type="checkbox" name="hobby" value="sport" id="sport"><label for="sport">運動</label>
+            <input type="checkbox" name="hobby" value="reading" id="reading"><label for="reading">閱讀</label>
+            <input type="checkbox" name"hobby" value="movie" id="movie"><label for="movie">電影</label>
+        </div>
+        <div class="div1">
+            <label for="" class="t1">照片:</label><input type="file" name="file1" multiple>
+        </div>
+        <div class="div1">
+        <label class="t1" for="memo1">自我介紹:</label><textarea clos="40" rows="6"id="memo1" nema="memo"></textarea>
+        </div>
+        <div class="div1">
+            <label for="" class="t1">blog:</label><input type="url" name="url1"  list="blog" value="http://">
+            <datalist id="blog">
+                <option value="http://www.facebook.com">
+                <option value="http://www.instagram.com">
+                <option value="http://tw.weibo.com/">
+            </datalist>
+        </div>
+        <div class="div1">
+                <label for="" class="t1">搜尋:</label><input type="search" neme="search1">
+        </div>
+        </fieldset>
+        <div class="sub">
+        <input type="submit" value="送出">
+        <input type="reset" value="清除">
+        </div>
+        <fieldset>
+        <div class="div1">
+            <label for="" class="t1">顏色:</label><input type="color" name="col">
+        </div>
+        <div class="div1">
+            <label for="" class="t1">range</label><input type="range" name="range" min="0" max="120">
+        </div>
+        <div>
+            Number:<input type="number" id="numberInput" min="-60" max="60" step="2" onchange="numberChange()" />
+                <input id="numberText" />
+            </div>
+            <div>
+            Range:<input type="range" id="rangeInput" min="-40" max="40" step="2" onchange="rangeChange()" />
+                <input id="rangeText" />
+            </div>
+        </fieldset>
+        <div class="sub">
+        <input type="submit" value="送出">
+        </div>
+    </form>
+</body>
+</html>
